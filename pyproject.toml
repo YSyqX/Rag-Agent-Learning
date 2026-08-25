@@ -7,7 +7,10 @@ authors = [
     { name = "Ysyq", email = "NguyetAlves@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "dashscope>=1.27.1",
+    "langchain-community>=0.4.2",
+]
 
 [project.scripts]
 rag-agent-learning = "rag_agent_learning:main"
