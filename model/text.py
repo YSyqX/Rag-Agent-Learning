@@ -7,7 +7,7 @@ from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
 print("脚本启动，API Key:", bool(os.getenv("DASHSCOPE_API_KEY")))
 
-model = ChatTongyi(model="qwen-max")  # 修正模型名
+model = ChatTongyi(model="qwen-max")  # type: ignore # 修正模型名
 
 messages = [
     SystemMessage(content="你是一个边塞诗人。"),
