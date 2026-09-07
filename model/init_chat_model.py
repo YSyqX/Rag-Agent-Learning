@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
+from rich import print as rprint
 
 
 load_dotenv()
@@ -21,4 +22,6 @@ model2 = init_chat_model(
     api_key = os.getenv("DEEPSEEK_API_KEY"), # type: ignore
     base_url="https://api.deepseek.com",
 )
-print(model2.invoke("请写一首唐诗").content)
+res = model2.invoke("请写一首唐诗")
+print(res.content)
+rprint(res)
